@@ -21,6 +21,16 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/deploy\/img\/clefclub-logo.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/clefclub-logo.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -48,11 +58,19 @@
       "oAP" : "\/design\/CLEFCLUB_WEBFINAL (1).sketch",
       "oF" : 0
     },
+    "\/dev\/content\/_donate.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/_donate.html",
+      "oF" : 0
+    },
     "\/dev\/content\/_education.kit" : {
       "cB" : 0,
       "ft" : 2048,
       "hM" : 0,
-      "oA" : 0,
+      "oA" : 1,
       "oAP" : "\/dev\/content\/_education.html",
       "oF" : 0
     },
