@@ -366,11 +366,51 @@ ul li {
 }
 
 .content {
-  margin-bottom: 24px;
+  display: grid;
+  grid-template-areas: "header" "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
+  margin-bottom: 24 px;
+}
+.content .header {
+  grid-area: header;
+}
+.content .hero {
+  grid-area: hero;
+}
+.content .welcome {
+  grid-area: welcome;
+}
+.content .history {
+  grid-area: history;
+}
+.content .education {
+  grid-area: education;
+}
+.content .membership {
+  grid-area: membership;
+}
+.content .rentals {
+  grid-area: rentals;
+}
+.content .events {
+  grid-area: events;
+}
+.content .donate {
+  grid-area: donate;
+}
+.content .media {
+  grid-area: media;
+}
+.content .footer {
+  grid-area: footer;
 }
 @media (min-width: 768px) {
   .content {
     margin-bottom: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .content {
+    margin-bottom: 64px;
   }
 }
 @media (min-width: 1200px) {
