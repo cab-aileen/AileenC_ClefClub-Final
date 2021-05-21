@@ -15,10 +15,10 @@ ul {
   }
 }
 
-.content {
+main {
   display: grid;
   grid-template-areas:
-    "header"
+    "header "
     "hero"
     "welcome"
     "history"
@@ -71,19 +71,8 @@ ul {
 
   .footer {
     grid-area: footer;
-  }
-
-  margin-bottom: 24 px;
-
-  @include md {
-    margin-bottom: 32px;
-  }
-
-  @include lg {
-    margin-bottom: 64px;
-  }
-
-  @include xl {
-    margin-bottom: 64px;
+    .socials {
+      display: flex;
+    }
   }
 }

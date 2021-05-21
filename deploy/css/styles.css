@@ -365,58 +365,45 @@ ul li {
   list-style: none;
 }
 
-.content {
+main {
   display: grid;
-  grid-template-areas: "header" "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
-  margin-bottom: 24 px;
+  grid-template-areas: "header " "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
 }
-.content .header {
+main .header {
   grid-area: header;
 }
-.content .hero {
+main .hero {
   grid-area: hero;
 }
-.content .welcome {
+main .welcome {
   grid-area: welcome;
 }
-.content .history {
+main .history {
   grid-area: history;
 }
-.content .education {
+main .education {
   grid-area: education;
 }
-.content .membership {
+main .membership {
   grid-area: membership;
 }
-.content .rentals {
+main .rentals {
   grid-area: rentals;
 }
-.content .events {
+main .events {
   grid-area: events;
 }
-.content .donate {
+main .donate {
   grid-area: donate;
 }
-.content .media {
+main .media {
   grid-area: media;
 }
-.content .footer {
+main .footer {
   grid-area: footer;
 }
-@media (min-width: 768px) {
-  .content {
-    margin-bottom: 32px;
-  }
-}
-@media (min-width: 1024px) {
-  .content {
-    margin-bottom: 64px;
-  }
-}
-@media (min-width: 1200px) {
-  .content {
-    margin-bottom: 64px;
-  }
+main .footer .socials {
+  display: flex;
 }
 
 /* =============
@@ -439,6 +426,41 @@ p {
   font-weight: 300;
 }
 
-.history {
-  display: grid;
+/* =============
+    Header
+============= */
+.welcome {
+  background: #8f6c95;
 }
+
+.history {
+  background: cornflowerblue;
+}
+
+.education {
+  background: #8f6c95;
+}
+
+.membership {
+  background: pink;
+}
+
+.rentals {
+  background: #8f6c95;
+}
+
+.events {
+  background: skyblue;
+}
+
+.donate {
+  background: #8f6c95;
+}
+
+.media {
+  background: chartreuse;
+}
+
+/* =============
+    Footer
+============= */

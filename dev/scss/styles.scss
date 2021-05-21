@@ -10,6 +10,7 @@
 @import "base/_typography";
 
 // Layout Styles
+@import "layout/_header";
 @import "content/_hero";
 @import "content/_welcome";
 @import "content/_history";
@@ -19,3 +20,4 @@
 @import "content/_events";
 @import "content/_donate";
 @import "content/_media";
+@import "layout/_footer";
