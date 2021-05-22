@@ -367,7 +367,7 @@ ul li {
 
 main {
   display: grid;
-  grid-template-areas: "header " "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
+  grid-template-areas: "header" "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
 }
 main .header {
   grid-area: header;
@@ -377,6 +377,12 @@ main .hero {
 }
 main .welcome {
   grid-area: welcome;
+}
+@media (min-width: 768px) {
+  main .welcome {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 200px);
+  }
 }
 main .history {
   grid-area: history;
@@ -433,32 +439,16 @@ p {
   background: #8f6c95;
 }
 
-.history {
-  background: cornflowerblue;
-}
-
 .education {
   background: #8f6c95;
-}
-
-.membership {
-  background: pink;
 }
 
 .rentals {
   background: #8f6c95;
 }
 
-.events {
-  background: skyblue;
-}
-
 .donate {
   background: #8f6c95;
-}
-
-.media {
-  background: chartreuse;
 }
 
 /* =============

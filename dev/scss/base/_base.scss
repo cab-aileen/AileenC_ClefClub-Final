@@ -18,7 +18,7 @@ ul {
 main {
   display: grid;
   grid-template-areas:
-    "header "
+    "header"
     "hero"
     "welcome"
     "history"
@@ -40,6 +40,10 @@ main {
 
   .welcome {
     grid-area: welcome;
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 200px);
+    }
   }
 
   .history {
