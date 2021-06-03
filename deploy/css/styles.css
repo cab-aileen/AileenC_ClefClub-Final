@@ -380,15 +380,71 @@ main .welcome {
 }
 @media (min-width: 768px) {
   main .welcome {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 200px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  main .welcome .intro {
+    grid-area: 2;
+  }
+  main .welcome .performer {
+    grid-row: 2/3;
+  }
+  main .welcome .intro2 {
+    grid-row: 3;
+    grid-area: 3;
+  }
+  main .welcome .eduevents1 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  main .welcome .eduevents2 {
+    grid-column: 2;
+    grid-row: 4;
   }
 }
 main .history {
   grid-area: history;
 }
+@media (min-width: 768px) {
+  main .history {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, auto);
+  }
+  main .history .title {
+    grid-row: 1/8;
+  }
+  main .history .segregation {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  main .history .unusual {
+    grid-column: span 2;
+  }
+  main .history .jazzhist {
+    grid-column: span 2;
+  }
+  main .history .streets {
+    display: flex;
+  }
+}
 main .education {
   grid-area: education;
+}
+@media (min-width: 768px) {
+  main .education {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(17, auto);
+  }
+  main .education .bass img {
+    width: 200%;
+  }
+  main .education .programs {
+    grid-column: span 2;
+    grid-row: 3/17;
+  }
 }
 main .membership {
   grid-area: membership;
@@ -441,6 +497,11 @@ p {
 
 .education {
   background: #8f6c95;
+}
+.education .gridtrumpet {
+  background-image: url("/deploy/img/trumpet-education.jpg");
+  width: 100%;
+  height: 300px;
 }
 
 .rentals {
