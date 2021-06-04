@@ -43,10 +43,11 @@ main {
     @include md {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(4, auto);
 
       .intro {
         grid-area: 2;
+        grid-template-rows: 200px;
       }
       .performer {
         grid-row: 2/3;
@@ -128,6 +129,7 @@ main {
 
   .media {
     grid-area: media;
+    display: none;
   }
 
   .footer {

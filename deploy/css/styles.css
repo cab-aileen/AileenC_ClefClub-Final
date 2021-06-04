@@ -382,10 +382,11 @@ main .welcome {
   main .welcome {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
   }
   main .welcome .intro {
     grid-area: 2;
+    grid-template-rows: 200px;
   }
   main .welcome .performer {
     grid-row: 2/3;
@@ -460,6 +461,7 @@ main .donate {
 }
 main .media {
   grid-area: media;
+  display: none;
 }
 main .footer {
   grid-area: footer;
@@ -488,9 +490,77 @@ p {
   font-weight: 300;
 }
 
-/* =============
-    Header
-============= */
+header {
+  background: #b7c6da;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header .desktop-logo {
+  display: none;
+}
+@media (min-width: 1024px) {
+  header .desktop-logo {
+    display: inline-block;
+  }
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div #button-container {
+  padding: 10px;
+  text-align: right;
+}
+header > div #button-container button {
+  background-color: #b7b7b8;
+  border-radius: 23px;
+  color: #0156cb;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.25s;
+}
+header > div #button-container button:hover {
+  background-color: #0156cb;
+  color: #fff;
+}
+header > div #burger-container {
+  align-items: left;
+  color: #0156cb;
+  display: flex;
+  padding: 10px;
+}
+@media (min-width: 1024px) {
+  header > div #burger-container {
+    display: none !important;
+  }
+}
+header > div #burger-container i {
+  cursor: pointer;
+  font-size: 1.875rem;
+}
+@media (min-width: 1024px) {
+  header > div #burger-container {
+    display: flex;
+    justify-content: left;
+  }
+  header > div #burger-container .mobile-logo {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+  }
+}
+
 .welcome {
   background: #8f6c95;
 }
@@ -499,7 +569,7 @@ p {
   background: #8f6c95;
 }
 .education .gridtrumpet {
-  background-image: url("/deploy/img/trumpet-education.jpg");
+  background-image: url("deploy/img/trumpet-education.jpg");
   width: 100%;
   height: 300px;
 }
