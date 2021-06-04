@@ -215,11 +215,11 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/shopping bag.svg" : {
+    "\/deploy\/img\/shopping-bag.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/deploy\/img\/shopping bag.svg",
+      "oAP" : "\/deploy\/img\/shopping-bag.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

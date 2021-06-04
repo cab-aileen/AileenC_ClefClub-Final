@@ -1,75 +1,111 @@
-header {
-  background: #b7c6da;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+.nav1 {
+  display: grid;
+  background: #dbe5f2;
+  grid-template-columns: 700px 1fr 1fr;
+  align-content: center;
 
-  .desktop-logo {
+  #logo {
     display: none;
 
-    @include lg {
+    @include md {
       display: inline-block;
     }
   }
 
-  > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // width: 100%;
+  #button-container {
+    padding: 10px;
+    text-align: right;
 
-    #button-container {
-      padding: 10px;
-      text-align: right;
-
-      button {
-        background-color: #b7b7b8;
-        border-radius: 23px;
-        color: #0156cb;
-        display: inline-block;
-        font-size: rem-calc(18);
-        font-weight: 700;
-        padding: 10px 20px;
-        border: none;
-        transition: 0.25s;
-
-        &:hover {
-          background-color: #0156cb;
-          color: $white;
-        }
-      }
-    }
-
-    #burger-container {
-      align-items: left;
+    button {
+      background-color: #b7b7b8;
+      border-radius: 23px;
       color: #0156cb;
-      display: flex;
-      padding: 10px;
+      display: inline-block;
+      font-size: rem-calc(18);
+      font-weight: 700;
+      padding: 10px 20px;
+      border: none;
+      transition: 0.25s;
 
-      @include lg {
-        display: none !important;
-      }
-
-      i {
-        cursor: pointer;
-        font-size: rem-calc(30);
-      }
-
-      @include lg {
-        display: flex;
-        justify-content: left;
-
-        .mobile-logo {
-          display: none;
-        }
+      &:hover {
+        background-color: #0156cb;
+        color: $white;
       }
     }
   }
 
-  @include lg {
+  #bag {
+    color: #0156cb;
+  }
+}
+.nav2 {
+  background: #b7c6da;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  #search {
+    color: #0156cb;
+  }
+
+  #burger-container {
+    align-items: center;
     display: flex;
+    padding: 10px;
+    color: #0156cb;
+
+    @include lg {
+      display: none !important;
+    }
+
+    i {
+      cursor: pointer;
+      font-size: rem-calc(30);
+    }
+  }
+
+  #nav-container {
+    background-color: #b7c6da;
+    width: 100%;
+    position: absolute;
+    top: 124px;
+
+    @include md {
+      top: 156px;
+    }
+
+    .nav-btns {
+      display: inline-block;
+      text-decoration: none;
+      margin: 0 auto;
+      color: #0156cb;
+      padding: 10px 5px;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-bottom: 3px solid white;
+      }
+      &:active {
+        background: #dbe5f2;
+      }
+    }
+    ul li {
+      text-align: center;
+    }
+    @include lg {
+      background-color: none;
+      display: block !important;
+      position: unset;
+      width: auto;
+      .nav-btns {
+        color: #0156cb;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+      }
+      ul li {
+        margin: 20px;
+      }
+    }
   }
 }
