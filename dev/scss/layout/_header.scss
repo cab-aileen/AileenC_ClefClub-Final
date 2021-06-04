@@ -2,7 +2,6 @@
   display: grid;
   background: #dbe5f2;
   grid-template-columns: 700px 1fr 1fr;
-  align-content: center;
 
   #logo {
     display: none;
@@ -38,11 +37,17 @@
     color: #0156cb;
   }
 }
+
 .nav2 {
   background: #b7c6da;
   display: flex;
   width: 100%;
+  position: absolute;
   justify-content: space-between;
+
+  @include lg {
+    justify-content: center;
+  }
 
   #search {
     color: #0156cb;
@@ -68,11 +73,7 @@
     background-color: #b7c6da;
     width: 100%;
     position: absolute;
-    top: 124px;
-
-    @include md {
-      top: 156px;
-    }
+    top: 50px;
 
     .nav-btns {
       display: inline-block;
@@ -101,10 +102,10 @@
       }
       ul {
         display: flex;
-        align-items: center;
       }
       ul li {
         margin: 20px;
+        align-items: center;
       }
     }
   }

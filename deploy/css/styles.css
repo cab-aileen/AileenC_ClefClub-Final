@@ -494,7 +494,6 @@ p {
   display: grid;
   background: #dbe5f2;
   grid-template-columns: 700px 1fr 1fr;
-  align-content: center;
 }
 .nav1 #logo {
   display: none;
@@ -531,7 +530,13 @@ p {
   background: #b7c6da;
   display: flex;
   width: 100%;
+  position: absolute;
   justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  .nav2 {
+    justify-content: center;
+  }
 }
 .nav2 #search {
   color: #0156cb;
@@ -555,12 +560,7 @@ p {
   background-color: #b7c6da;
   width: 100%;
   position: absolute;
-  top: 124px;
-}
-@media (min-width: 768px) {
-  .nav2 #nav-container {
-    top: 156px;
-  }
+  top: 50px;
 }
 .nav2 #nav-container .nav-btns {
   display: inline-block;
@@ -591,10 +591,10 @@ p {
   }
   .nav2 #nav-container ul {
     display: flex;
-    align-items: center;
   }
   .nav2 #nav-container ul li {
     margin: 20px;
+    align-items: center;
   }
 }
 
