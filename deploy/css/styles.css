@@ -594,12 +594,14 @@ body {
 .hero {
   background: url("/deploy/img/jazzteacher.jpg");
   background-size: cover;
+  background-position: center;
   width: 100%;
   height: 50vh;
 }
 
 .welcome {
   background: #8f6c95;
+  color: #ffffff;
 }
 .welcome .semibolditalic {
   font-weight: 600;
@@ -608,24 +610,77 @@ body {
 .welcome .regular {
   font-weight: 400;
 }
+.welcome .cc {
+  background-color: #194f90;
+}
+
+.jazzhistor {
+  background: url("/deploy/img/jazzhistory.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  max-width: 100%;
+}
 
 .education {
   background: #8f6c95;
+  color: #ffffff;
 }
 .education .gridtrumpet {
   background-image: url("/deploy/img/trumpet-education.jpg");
   width: 100%;
   height: 300px;
 }
+.education .calendar {
+  background: #dbe5f2;
+  color: #111c4e;
+}
+.education .cal1 {
+  background: #0093e0;
+}
+.education .cal2 {
+  background: #a39ce2;
+}
+
+.membership {
+  color: #ffff;
+}
+
+.title {
+  background-color: #194f90;
+  color: #ffff;
+}
+
+.box {
+  background: #0093e0;
+}
 
 .rentals {
   background: #8f6c95;
+  color: #ffffff;
+}
+
+.purp {
+  background: #a39ce2;
+}
+
+.purp2 {
+  background: #a39ce2;
+}
+
+.parkbox {
+  background: #dbe5f2;
 }
 
 .donate {
   background: #8f6c95;
+  color: #ffffff;
 }
 
 /* =============
     Footer
 ============= */
+.footer {
+  color: #0156cb;
+  background: #b7c6da;
+}

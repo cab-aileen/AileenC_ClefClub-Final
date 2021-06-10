@@ -114,6 +114,26 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/deploy\/img\/Group 2.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Group 2.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/deploy\/img\/Group.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/Group.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/instagram-button.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -214,16 +234,6 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
-    },
-    "\/deploy\/img\/shopping-bag.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/deploy\/img\/shopping-bag.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/deploy\/img\/trumpet-education.jpg" : {
       "ft" : 16384,
@@ -700,23 +710,6 @@
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
-    },
-    "\/node_modules" : {
-      "ft" : 65536,
-      "oA" : 2,
-      "oAP" : "\/node_modules",
-      "oF" : 0
-    },
-    "\/node_modules\/jquery\/dist\/jquery.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/node_modules\/jquery\/dist\/jquery-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,

@@ -1,9 +1,23 @@
 .education {
   background: #8f6c95;
+  color: #ffffff;
 
   .gridtrumpet {
     background-image: url("/deploy/img/trumpet-education.jpg");
     width: 100%;
     height: 300px;
+  }
+
+  .calendar {
+    background: #dbe5f2;
+    color: #111c4e;
+  }
+
+  .cal1 {
+    background: #0093e0;
+  }
+
+  .cal2 {
+    background: #a39ce2;
   }
 }

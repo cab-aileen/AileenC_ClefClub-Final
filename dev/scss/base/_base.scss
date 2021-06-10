@@ -40,6 +40,7 @@ main {
 
   .welcome {
     grid-area: welcome;
+
     @include md {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -69,6 +70,7 @@ main {
 
   .history {
     grid-area: history;
+
     @include md {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

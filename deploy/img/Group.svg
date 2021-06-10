@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="67px" viewBox="0 0 66 67" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="IDEA-2-FINAL-DESIGN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-COLOR" transform="translate(-127.000000, -2606.000000)" stroke="#EBEAEA">
+            <g id="video" transform="translate(-82.000000, 2508.000000)">
+                <g id="Group" transform="translate(209.000000, 98.500000)">
+                    <polygon id="Path" fill="#EBEAEA" points="28 17 28 49 46 33"></polygon>
+                    <circle id="Oval" stroke-width="2" cx="33" cy="33" r="32"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
