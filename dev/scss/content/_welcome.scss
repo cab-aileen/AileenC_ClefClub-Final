@@ -1,3 +1,14 @@
 .welcome {
   background: #8f6c95;
+
+  .semibolditalic {
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  .regular {
+    font-weight: 400;
+  }
 }
+
+//font-size: rem-calc(16);

@@ -473,21 +473,8 @@ main .footer .socials {
 /* =============
     Typography
 ============= */
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.section-title {
-  font-weight: 300;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
@@ -613,6 +600,13 @@ p {
 
 .welcome {
   background: #8f6c95;
+}
+.welcome .semibolditalic {
+  font-weight: 600;
+  font-style: italic;
+}
+.welcome .regular {
+  font-weight: 400;
 }
 
 .education {
