@@ -37,7 +37,7 @@
       "oAP" : "\/deploy\/img\/auditorium.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -152,17 +152,17 @@
       "oAP" : "\/deploy\/img\/jazzhistory.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
     },
-    "\/deploy\/img\/jazzperformer.jpg" : {
+    "\/deploy\/img\/jazzperformer-new.jpg" : {
       "ft" : 16384,
-      "iS" : 64031,
+      "iS" : 185925,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/deploy\/img\/jazzperformer.jpg",
+      "oAP" : "\/deploy\/img\/jazzperformer-new.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -178,7 +178,7 @@
       "oAP" : "\/deploy\/img\/jazzteacher.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -235,6 +235,16 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/pulldown-events.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/deploy\/img\/pulldown-events.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/deploy\/img\/trumpet-education.jpg" : {
       "ft" : 16384,
       "iS" : 67130,
@@ -256,7 +266,7 @@
       "oAP" : "\/deploy\/img\/trumpetplayer.jpg",
       "oF" : 0,
       "oIPL" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75

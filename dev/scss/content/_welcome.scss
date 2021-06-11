@@ -1,19 +1,31 @@
 .welcome {
   background: #8f6c95;
   color: #ffffff;
+}
 
-  .semibolditalic {
-    font-weight: 600;
-    font-style: italic;
-  }
+.cc {
+  padding: 20px;
+}
 
-  .regular {
-    font-weight: 400;
-  }
+.performer-img {
+  background: url("/deploy/img/jazzperformer-new.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+}
 
-  .cc {
-    background-color: #194f90;
-  }
+.semibolditalic {
+  font-weight: 600;
+  font-style: italic;
+}
+
+#regular {
+  font-weight: 400;
+}
+
+.cc {
+  background-color: #194f90;
 }
 
 //font-size: rem-calc(16);

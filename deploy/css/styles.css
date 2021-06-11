@@ -369,105 +369,152 @@ main {
   display: grid;
   grid-template-areas: "header" "hero" "welcome" "history" "education" "membership" "rentals" "events" "donate" "media" "footer";
 }
-main .header {
+
+.header {
   grid-area: header;
 }
-main .hero {
+
+.hero {
   grid-area: hero;
+  width: 100%;
 }
-main .welcome {
+
+.welcome {
   grid-area: welcome;
 }
+.welcome img {
+  width: 100%;
+}
 @media (min-width: 768px) {
-  main .welcome {
+  .welcome {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
   }
-  main .welcome .intro {
+  .welcome .intro {
     grid-area: 2;
     grid-template-rows: 200px;
   }
-  main .welcome .performer {
+  .welcome .performer {
     grid-row: 2/4;
   }
-  main .welcome .intro2 {
+  .welcome .intro2 {
     grid-row: 3;
     grid-area: 3;
   }
-  main .welcome .eduevents1 {
+  .welcome .eduevents1 {
     grid-column: 1;
     grid-row: 4;
   }
-  main .welcome .eduevents2 {
+  .welcome .eduevents2 {
     grid-column: 2;
     grid-row: 4;
   }
 }
-main .history {
+
+.history {
   grid-area: history;
 }
 @media (min-width: 768px) {
-  main .history {
+  .history {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, auto);
   }
-  main .history .title {
+  .history .title {
     grid-row: 1/8;
   }
-  main .history .segregation {
+  .history .segregation {
     grid-column: 2;
     grid-row: 1;
   }
-  main .history .unusual {
+  .history .unusual {
     grid-column: span 2;
   }
-  main .history .jazzhist {
+  .history .jazzhist {
     grid-column: span 2;
   }
-  main .history .streets {
+  .history .streets {
     display: flex;
     grid-column: span 2;
   }
 }
-main .education {
+
+.education {
   grid-area: education;
 }
+.education .ens-title a {
+  display: grid;
+  grid-template-columns: 90% auto;
+  align-items: center;
+}
 @media (min-width: 768px) {
-  main .education {
+  .education {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(17, auto);
   }
-  main .education .bass img {
-    width: 200%;
+  .education .bass img {
+    width: 100%;
   }
-  main .education .programs {
+  .education .programs {
     grid-column: span 2;
     grid-row: 3/17;
   }
 }
-main .membership {
+
+.membership {
   grid-area: membership;
 }
-main .rentals {
+
+.rentals {
   grid-area: rentals;
 }
-main .events {
+
+.events {
   grid-area: events;
 }
-main .donate {
+
+.donate {
   grid-area: donate;
 }
-main .media {
+
+.media {
   grid-area: media;
 }
-main .footer {
+
+.footer {
   grid-area: footer;
 }
-main .footer .socials {
+.footer .socials ul {
   display: flex;
+}
+.footer .locations section ul li {
+  display: grid;
+  grid-template-columns: 25px 200px;
+  grid-gap: 10px;
+}
+@media (min-width: 768px) {
+  .footer .content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 50px;
+    grid-template-areas: "locations locations locations newsletter newsletter newsletter" "locations locations locations socials socials socials";
+  }
+  .footer .content .locations {
+    grid-area: locations;
+  }
+  .footer .content .newsletter {
+    grid-area: newsletter;
+  }
+  .footer .content .socials {
+    grid-area: socials;
+  }
+}
+@media (min-width: 1024px) {
+  .footer .content {
+    grid-template-areas: ". locations newsletter newsletter socials .";
+  }
 }
 
 /* =============
@@ -475,6 +522,9 @@ main .footer .socials {
 ============= */
 body {
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-weight: 500;
+  font-weight: 600;
 }
 
 .header {
@@ -596,21 +646,36 @@ body {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 50vh;
+  height: 70vh;
 }
 
 .welcome {
   background: #8f6c95;
   color: #ffffff;
 }
-.welcome .semibolditalic {
+
+.cc {
+  padding: 20px;
+}
+
+.performer-img {
+  background: url("/deploy/img/jazzperformer-new.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.semibolditalic {
   font-weight: 600;
   font-style: italic;
 }
-.welcome .regular {
+
+#regular {
   font-weight: 400;
 }
-.welcome .cc {
+
+.cc {
   background-color: #194f90;
 }
 
@@ -619,40 +684,139 @@ body {
   background-size: cover;
   background-position: center;
   height: 50vh;
-  max-width: 100%;
+  width: 100%;
+}
+
+.histtrumpet {
+  background: url("/deploy/img/trumpetplayer.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
 }
 
 .education {
   background: #8f6c95;
   color: #ffffff;
 }
+.education a {
+  text-decoration: none;
+}
 .education .gridtrumpet {
   background-image: url("/deploy/img/trumpet-education.jpg");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: 300px;
+  height: 50vh;
+}
+.education .ensemble {
+  background: #a39ce2;
+  margin: 80px 20px;
+  padding: 45px 25px;
+}
+.education .ensemble:hover {
+  background: #7e75d6;
+}
+.education .ensemble img {
+  display: none;
+}
+.education .ensemble .info {
+  display: none;
+}
+.education .private {
+  background: #a39ce2;
+  margin: 80px 20px;
+  padding: 45px 25px;
+}
+.education .private:hover {
+  background: #7e75d6;
+}
+.education .private img {
+  display: none;
+}
+.education .private .info2 {
+  display: none;
+}
+.education .master {
+  background: #a39ce2;
+  margin: 80px 20px;
+  padding: 45px 25px;
+}
+.education .master:hover {
+  background: #7e75d6;
+}
+.education .master img {
+  display: none;
+}
+.education .master .info3 {
+  display: none;
 }
 .education .calendar {
   background: #dbe5f2;
   color: #111c4e;
+  padding-top: 25px;
+}
+.education .calendar h2 {
+  background: #0093e0;
+  color: #ffffff;
+  padding: 25px;
+  margin-right: 95px;
+}
+.education .calendar ul {
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .education .cal1 {
   background: #0093e0;
+  text-align: left;
+  margin: 30px;
+  padding: 50px 45px;
 }
 .education .cal2 {
   background: #a39ce2;
-}
-
-.membership {
-  color: #ffff;
+  text-align: left;
+  margin: 30px;
+  padding: 50px 45px;
 }
 
 .title {
   background-color: #194f90;
   color: #ffff;
+  padding: 20px;
 }
 
-.box {
+.membership {
+  padding-top: 80px;
+  color: #fff;
+}
+.membership li {
   background: #0093e0;
+  margin-top: 45px;
+  margin-left: 75px;
+  margin-right: 75px;
+  margin-bottom: 80px;
+  box-shadow: 1px 1px 3px gray;
+}
+.membership li h3 {
+  padding: 45px;
+}
+.membership li .member-content {
+  padding: 0 50px 30px;
+  text-align: center;
+}
+.membership li button {
+  background: #b7b7b8;
+  border: none;
+  padding: 5px 10px;
+  color: #0156cb;
+}
+@media (min-width: 768px) {
+  .membership {
+    width: 75%;
+    margin: 30px auto;
+  }
 }
 
 .rentals {
@@ -660,27 +824,225 @@ body {
   color: #ffffff;
 }
 
+.table {
+  color: #111c4e;
+}
+
 .purp {
   background: #a39ce2;
+  padding: 50px;
 }
 
 .purp2 {
   background: #a39ce2;
+  padding: 50px;
 }
 
 .parkbox {
   background: #dbe5f2;
 }
 
+.march {
+  display: flex;
+  grid-gap: 10px;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .march {
+    display: none;
+  }
+}
+
+.events-cal {
+  display: none;
+}
+@media (min-width: 768px) {
+  .events-cal {
+    display: list-item;
+  }
+}
+
+.month {
+  padding: 45px 600px;
+  background: #0093e0;
+  text-align: center;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #0093e0;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: #0093e0;
+  color: white !important;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 720px) {
+  .weekdays li,
+.days li {
+    width: 13.1%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .weekdays li,
+.days li {
+    width: 12.5%;
+  }
+
+  .days li .active {
+    padding: 2px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .weekdays li,
+.days li {
+    width: 12.2%;
+  }
+}
 .donate {
   background: #8f6c95;
   color: #ffffff;
 }
 
+.media img {
+  display: none;
+}
+.media a {
+  text-decoration: none;
+}
+
+.videos {
+  line-height: 1.5;
+  border-bottom: 1px solid #0156cb;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .videos img {
+    display: list-item;
+  }
+
+  .photos img {
+    display: list-item;
+  }
+}
 /* =============
     Footer
 ============= */
 .footer {
-  color: #0156cb;
   background: #b7c6da;
+  padding: 50px 0;
+}
+.footer .content {
+  margin: 15px;
+}
+.footer .address {
+  line-height: 1.5;
+  border-bottom: 1px solid #0156cb;
+  padding-bottom: 20px;
+}
+.footer .address a {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #0156cb;
+}
+.footer .address:last-child {
+  border: none;
+}
+.footer h1,
+.footer h2 {
+  color: #0156cb;
+  font-weight: 400;
+}
+.footer h1 {
+  font-size: 1.25rem;
+}
+.footer h2 {
+  font-size: 1rem;
+}
+.footer .icon {
+  color: #ffff;
+}
+.footer address {
+  color: #0156cb;
+  font-size: 0.75rem;
+}
+.footer .newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer .newsletter form input {
+  background: #dbdee2;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  width: 88%;
+}
+.footer .newsletter form input::placeholder {
+  color: #667b97;
+}
+.footer .newsletter button {
+  font-size: 14px;
+  width: 75px;
+  padding: 5px 10px;
+  border: none;
+  background: #b7b7b8;
+}
+@media (min-width: 1024px) {
+  .footer .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+.footer .social-icon a {
+  font-size: 26px;
+  color: #0156cb;
+  padding: 0 5px 0 0;
+}
+.footer .social-icon a:hover {
+  color: #014198;
 }

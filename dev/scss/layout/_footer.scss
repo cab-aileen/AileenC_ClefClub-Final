@@ -2,6 +2,90 @@
     Footer
 ============= */
 .footer {
-  color: #0156cb;
   background: #b7c6da;
+  padding: 50px 0;
+
+  .content {
+    margin: 15px;
+  }
+
+  .address {
+    line-height: 1.5;
+    border-bottom: 1px solid #0156cb;
+    padding-bottom: 20px;
+    a {
+      font-size: rem-calc(12);
+      text-decoration: none;
+      color: #0156cb;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  h1,
+  h2 {
+    color: #0156cb;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: rem-calc(20);
+  }
+
+  h2 {
+    font-size: rem-calc(16);
+  }
+
+  .icon {
+    color: #ffff;
+  }
+
+  address {
+    color: #0156cb;
+    font-size: rem-calc(12);
+  }
+
+  .newsletter {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    form input {
+      background: #dbdee2;
+      margin-bottom: 15px;
+      padding: 10px 20px;
+      width: 88%;
+
+      &::placeholder {
+        color: #667b97;
+      }
+    }
+    button {
+      font-size: 14px;
+      width: 75px;
+      padding: 5px 10px;
+      border: none;
+      background: #b7b7b8;
+    }
+  }
+
+  @include lg {
+    .socials {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .social-icon a {
+    font-size: 26px;
+    color: #0156cb;
+    padding: 0 5px 0 0;
+    &:hover {
+      color: darken(#0156cb, 10%);
+    }
+  }
 }

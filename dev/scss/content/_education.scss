@@ -2,22 +2,103 @@
   background: #8f6c95;
   color: #ffffff;
 
+  a {
+    text-decoration: none;
+  }
+
   .gridtrumpet {
     background-image: url("/deploy/img/trumpet-education.jpg");
+    background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 300px;
+    height: 50vh;
+  }
+
+  .ensemble {
+    background: #a39ce2;
+    &:hover {
+      background: darken(#a39ce2, 10%);
+    }
+
+    margin: 80px 20px;
+    padding: 45px 25px;
+
+    img {
+      display: none;
+    }
+
+    .info {
+      display: none;
+    }
+  }
+
+  .private {
+    background: #a39ce2;
+    &:hover {
+      background: darken(#a39ce2, 10%);
+    }
+
+    margin: 80px 20px;
+    padding: 45px 25px;
+
+    img {
+      display: none;
+    }
+
+    .info2 {
+      display: none;
+    }
+  }
+
+  .master {
+    background: #a39ce2;
+    &:hover {
+      background: darken(#a39ce2, 10%);
+    }
+
+    margin: 80px 20px;
+    padding: 45px 25px;
+
+    img {
+      display: none;
+    }
+
+    .info3 {
+      display: none;
+    }
   }
 
   .calendar {
     background: #dbe5f2;
     color: #111c4e;
+    padding-top: 25px;
+
+    h2 {
+      background: #0093e0;
+      color: #ffffff;
+      padding: 25px;
+      margin-right: 95px;
+    }
+
+    ul {
+      padding-top: 20px;
+      padding-bottom: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   .cal1 {
     background: #0093e0;
+    text-align: left;
+    margin: 30px;
+    padding: 50px 45px;
   }
 
   .cal2 {
     background: #a39ce2;
+    text-align: left;
+    margin: 30px;
+    padding: 50px 45px;
   }
 }

@@ -1,11 +1,40 @@
-.membership {
-  color: #ffff;
-}
-
 .title {
   background-color: #194f90;
   color: #ffff;
+  padding: 20px;
 }
-.box {
-  background: #0093e0;
+
+.membership {
+  padding-top: 80px;
+  color: #fff;
+
+  li {
+    background: #0093e0;
+    margin-top: 45px;
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 80px;
+    box-shadow: 1px 1px 3px gray;
+
+    h3 {
+      padding: 45px;
+    }
+
+    .member-content {
+      padding: 0 50px 30px;
+      text-align: center;
+    }
+
+    button {
+      background: #b7b7b8;
+      border: none;
+      padding: 5px 10px;
+      color: #0156cb;
+    }
+  }
+
+  @include md {
+    width: 75%;
+    margin: 30px auto;
+  }
 }
