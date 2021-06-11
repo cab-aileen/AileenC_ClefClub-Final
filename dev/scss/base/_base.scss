@@ -37,14 +37,10 @@ main {
 
 .hero {
   grid-area: hero;
-  width: 100%;
 }
 
 .welcome {
   grid-area: welcome;
-  img {
-    width: 100%;
-  }
 
   @include md {
     display: grid;
@@ -107,7 +103,7 @@ main {
   .ens-title {
     a {
       display: grid;
-      grid-template-columns: 90% auto;
+      grid-template-columns: 180px auto;
       align-items: center;
     }
   }
@@ -146,6 +142,12 @@ main {
 
 .media {
   grid-area: media;
+  a {
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: 70px auto;
+    align-items: center;
+  }
 }
 
 .footer {
@@ -192,4 +194,18 @@ main {
       grid-template-areas: ". locations newsletter newsletter socials .";
     }
   }
+}
+
+h1 {
+  font-family: "Neuton";
+}
+h2 {
+  font-family: "Neuton";
+}
+
+h3 {
+  font-family: "Neuton";
+}
+p {
+  font-family: "Montserrat";
 }

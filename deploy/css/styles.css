@@ -376,14 +376,10 @@ main {
 
 .hero {
   grid-area: hero;
-  width: 100%;
 }
 
 .welcome {
   grid-area: welcome;
-}
-.welcome img {
-  width: 100%;
 }
 @media (min-width: 768px) {
   .welcome {
@@ -445,7 +441,7 @@ main {
 }
 .education .ens-title a {
   display: grid;
-  grid-template-columns: 90% auto;
+  grid-template-columns: 180px auto;
   align-items: center;
 }
 @media (min-width: 768px) {
@@ -482,6 +478,12 @@ main {
 .media {
   grid-area: media;
 }
+.media a {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 70px auto;
+  align-items: center;
+}
 
 .footer {
   grid-area: footer;
@@ -517,14 +519,28 @@ main {
   }
 }
 
+h1 {
+  font-family: "Neuton";
+}
+
+h2 {
+  font-family: "Neuton";
+}
+
+h3 {
+  font-family: "Neuton";
+}
+
+p {
+  font-family: "Montserrat";
+}
+
 /* =============
     Typography
 ============= */
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-weight: 500;
-  font-weight: 600;
 }
 
 .header {
@@ -551,7 +567,6 @@ body {
 }
 .nav1 #button-container button {
   background-color: #b7b7b8;
-  border-radius: 23px;
   color: #0156cb;
   display: inline-block;
   font-size: 1.125rem;
@@ -652,6 +667,7 @@ body {
 .welcome {
   background: #8f6c95;
   color: #ffffff;
+  padding-top: 80px;
 }
 
 .cc {
@@ -679,6 +695,10 @@ body {
   background-color: #194f90;
 }
 
+.history {
+  padding-top: 80px;
+}
+
 .jazzhistor {
   background: url("/deploy/img/jazzhistory.jpg");
   background-size: cover;
@@ -698,6 +718,7 @@ body {
 .education {
   background: #8f6c95;
   color: #ffffff;
+  padding-top: 80px;
 }
 .education a {
   text-decoration: none;
@@ -822,6 +843,7 @@ body {
 .rentals {
   background: #8f6c95;
   color: #ffffff;
+  padding-top: 80px;
 }
 
 .table {
@@ -836,6 +858,10 @@ body {
 .purp2 {
   background: #a39ce2;
   padding: 50px;
+}
+
+.events {
+  padding-top: 80px;
 }
 
 .parkbox {
@@ -945,19 +971,24 @@ body {
 .donate {
   background: #8f6c95;
   color: #ffffff;
+  padding-top: 80px;
 }
 
+.media {
+  padding-top: 80px;
+}
 .media img {
   display: none;
-}
-.media a {
-  text-decoration: none;
 }
 
 .videos {
   line-height: 1.5;
   border-bottom: 1px solid #0156cb;
-  padding-bottom: 20px;
+  padding: 20px;
+}
+
+.photos {
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
@@ -1026,8 +1057,8 @@ body {
 }
 .footer .newsletter button {
   font-size: 14px;
-  width: 75px;
   padding: 5px 10px;
+  color: #0156cb;
   border: none;
   background: #b7b7b8;
 }
