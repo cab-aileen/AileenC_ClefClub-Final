@@ -16,8 +16,44 @@
   }
 }
 
-.table {
+.table1 {
   color: #111c4e;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+  tr th {
+    font-family: Neuton;
+    padding: 15px;
+  }
+  tr td {
+    padding: 15px;
+  }
+}
+.table2 {
+  color: #111c4e;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  tr th {
+    font-family: Neuton;
+    padding: 15px;
+  }
+  tr td {
+    padding: 15px;
+  }
+}
+.table3 {
+  color: #111c4e;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  tr th {
+    font-family: Neuton;
+    padding: 15px;
+  }
+  tr td {
+    padding: 15px;
+  }
 }
 
 .purp {

@@ -512,7 +512,7 @@ main {
   .rentals {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
     grid-template-areas: "ti ti . . pur pur pur pur" "ti ti  . . purr purr purr purr" "hall hall hall hall hall hall hall hall" "hall hall hall hall hall hall hall hall" "ta ta ta ta ta ta2 ta2 ta2" ". . tb3 tb3 tb3 tb3 . ." ". bo bo bo bo bo bo .";
   }
   .rentals .purp {
@@ -551,6 +551,41 @@ main {
 
 .donate {
   grid-area: donate;
+}
+.donate .audi {
+  display: none;
+}
+@media (min-width: 768px) {
+  .donate {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "td td . . si si si ." "td td  . . tx tx tx ." "au au au au by by by by" "su su su su ar ar ar ar";
+  }
+  .donate .audi {
+    display: list-item;
+  }
+  .donate .title {
+    grid-area: td;
+  }
+  .donate .simply {
+    grid-area: si;
+  }
+  .donate .tax {
+    grid-area: tx;
+  }
+  .donate .audi {
+    grid-area: au;
+  }
+  .donate .boys {
+    grid-area: by;
+  }
+  .donate .arrow {
+    grid-area: ar;
+  }
+  .donate .support {
+    grid-area: su;
+  }
 }
 
 .media {
@@ -799,6 +834,14 @@ body {
   color: #111c4e;
 }
 
+button {
+  background: #b7b7b8;
+  color: #0156cb;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
 .jazzhistor {
   background: url("/deploy/img/jazzhistory.jpg");
   background-size: cover;
@@ -972,8 +1015,46 @@ body {
   font-weight: 600;
 }
 
-.table {
+.table1 {
   color: #111c4e;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+.table1 tr th {
+  font-family: Neuton;
+  padding: 15px;
+}
+.table1 tr td {
+  padding: 15px;
+}
+
+.table2 {
+  color: #111c4e;
+  margin-right: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.table2 tr th {
+  font-family: Neuton;
+  padding: 15px;
+}
+.table2 tr td {
+  padding: 15px;
+}
+
+.table3 {
+  color: #111c4e;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.table3 tr th {
+  font-family: Neuton;
+  padding: 15px;
+}
+.table3 tr td {
+  padding: 15px;
 }
 
 .purp {
@@ -1101,9 +1182,47 @@ body {
   color: #ffffff;
   padding-top: 80px;
 }
+.donate button {
+  background: #b7b7b8;
+  color: #0156cb;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+.donate .title {
+  margin-top: auto;
+}
+.donate .arrow {
+  margin: 16px 0;
+}
+.donate .arrow a {
+  text-decoration: none;
+  font-family: Neuton;
+  font-weight: 600;
+  color: #0156cb;
+}
+.donate .audi {
+  margin-left: 20px;
+}
+.donate .support {
+  margin-left: 20px;
+  margin-bottom: 70px;
+}
+.donate .support a {
+  text-decoration: none;
+  font-family: Neuton;
+  font-weight: 600;
+  color: #0156cb;
+}
 
 .media {
   padding-top: 80px;
+}
+.media a {
+  text-decoration: none;
+  font-family: Neuton;
+  font-weight: 600;
+  color: #0156cb;
 }
 .media img {
   display: none;

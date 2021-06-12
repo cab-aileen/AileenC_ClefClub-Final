@@ -2,4 +2,39 @@
   background: #8f6c95;
   color: #ffffff;
   padding-top: 80px;
+
+  button {
+    background: #b7b7b8;
+    color: #0156cb;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+
+  .title {
+    margin-top: auto;
+  }
+  .arrow {
+    margin: 16px 0;
+    a {
+      text-decoration: none;
+      font-family: Neuton;
+      font-weight: 600;
+      color: #0156cb;
+    }
+  }
+  .audi {
+    margin-left: 20px;
+  }
+
+  .support {
+    margin-left: 20px;
+    margin-bottom: 70px;
+    a {
+      text-decoration: none;
+      font-family: Neuton;
+      font-weight: 600;
+      color: #0156cb;
+    }
+  }
 }

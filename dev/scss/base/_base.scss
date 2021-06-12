@@ -210,7 +210,7 @@ main {
   @include md {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
     grid-template-areas:
       "ti ti . . pur pur pur pur"
       "ti ti  . . purr purr purr purr"
@@ -264,6 +264,52 @@ main {
 }
 .donate {
   grid-area: donate;
+
+  .audi {
+    display: none;
+  }
+
+  @include md {
+    .audi {
+      display: list-item;
+    }
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "td td . . si si si ."
+      "td td  . . tx tx tx ."
+      "au au au au by by by by"
+      "su su su su ar ar ar ar";
+
+    .title {
+      grid-area: td;
+    }
+
+    .simply {
+      grid-area: si;
+    }
+
+    .tax {
+      grid-area: tx;
+    }
+
+    .audi {
+      grid-area: au;
+    }
+
+    .boys {
+      grid-area: by;
+    }
+
+    .arrow {
+      grid-area: ar;
+    }
+
+    .support {
+      grid-area: su;
+    }
+  }
 }
 
 .media {
