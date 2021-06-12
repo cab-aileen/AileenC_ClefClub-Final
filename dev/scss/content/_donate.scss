@@ -16,11 +16,20 @@
   }
   .arrow {
     margin: 16px 0;
+
     a {
       text-decoration: none;
       font-family: Neuton;
       font-weight: 600;
       color: #0156cb;
+    }
+
+    @include md {
+      text-align: center;
+      .support {
+        margin-left: 20px;
+        margin-bottom: 70px;
+      }
     }
   }
   .audi {
@@ -28,8 +37,6 @@
   }
 
   .support {
-    margin-left: 20px;
-    margin-bottom: 70px;
     a {
       text-decoration: none;
       font-family: Neuton;

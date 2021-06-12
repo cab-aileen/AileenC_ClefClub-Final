@@ -126,6 +126,7 @@ main {
     .streets {
       grid-area: st;
       display: flex;
+      grid-gap: 40px;
     }
 
     .histtrumpet {

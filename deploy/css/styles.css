@@ -444,6 +444,7 @@ main {
   .history .streets {
     grid-area: st;
     display: flex;
+    grid-gap: 40px;
   }
   .history .histtrumpet {
     grid-area: trum;
@@ -1129,6 +1130,8 @@ button {
 .month ul li {
   color: white;
   font-size: 20px;
+  font-family: Neuton;
+  font-weight: 600;
   letter-spacing: 3px;
 }
 
@@ -1201,12 +1204,17 @@ button {
   font-weight: 600;
   color: #0156cb;
 }
+@media (min-width: 768px) {
+  .donate .arrow {
+    text-align: center;
+  }
+  .donate .arrow .support {
+    margin-left: 20px;
+    margin-bottom: 70px;
+  }
+}
 .donate .audi {
   margin-left: 20px;
-}
-.donate .support {
-  margin-left: 20px;
-  margin-bottom: 70px;
 }
 .donate .support a {
   text-decoration: none;
