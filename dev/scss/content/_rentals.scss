@@ -4,6 +4,18 @@
   padding-top: 80px;
 }
 
+.book {
+  margin-bottom: 75px;
+  font-weight: 600;
+  button {
+    background: #b7b7b8;
+    color: #0156cb;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 600;
+  }
+}
+
 .table {
   color: #111c4e;
 }
@@ -11,9 +23,21 @@
 .purp {
   background: #a39ce2;
   padding: 50px;
+  margin-top: 45px;
 }
 
 .purp2 {
   background: #a39ce2;
   padding: 50px;
+  margin-bottom: 80px;
+}
+
+@include md {
+  .purp {
+    margin-bottom: 40px;
+  }
+
+  .book {
+    text-align: center;
+  }
 }

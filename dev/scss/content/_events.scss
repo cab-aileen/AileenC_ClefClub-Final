@@ -1,12 +1,24 @@
 .events {
   padding-top: 80px;
+  color: #111c4e;
 }
 
 .parkbox {
   background: #dbe5f2;
+  padding: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+
+  @include md {
+    display: flex;
+    h3 {
+      margin-right: 120px;
+    }
+  }
 }
 .march {
   display: flex;
+  margin-top: 45px;
   grid-gap: 10px;
   justify-content: center;
 
@@ -19,12 +31,13 @@
   display: none;
 
   @include md {
+    margin-top: 40px;
     display: list-item;
   }
 }
 
 .month {
-  padding: 45px 600px;
+  padding: 45px 300px;
   background: #0093e0;
   text-align: center;
 }
@@ -78,29 +91,4 @@
   padding: 5px;
   background: #0093e0;
   color: white !important;
-}
-
-/* Add media queries for smaller screens */
-@media screen and (max-width: 720px) {
-  .weekdays li,
-  .days li {
-    width: 13.1%;
-  }
-}
-
-@media screen and (max-width: 420px) {
-  .weekdays li,
-  .days li {
-    width: 12.5%;
-  }
-  .days li .active {
-    padding: 2px;
-  }
-}
-
-@media screen and (max-width: 290px) {
-  .weekdays li,
-  .days li {
-    width: 12.2%;
-  }
 }

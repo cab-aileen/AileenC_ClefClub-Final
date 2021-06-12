@@ -17,6 +17,9 @@
 
   .ensemble {
     background: #a39ce2;
+    h2 {
+      color: #0156cb;
+    }
     &:hover {
       background: darken(#a39ce2, 10%);
     }
@@ -35,6 +38,10 @@
 
   .private {
     background: #a39ce2;
+
+    h2 {
+      color: #0156cb;
+    }
     &:hover {
       background: darken(#a39ce2, 10%);
     }
@@ -53,6 +60,10 @@
 
   .master {
     background: #a39ce2;
+
+    h2 {
+      color: #0156cb;
+    }
     &:hover {
       background: darken(#a39ce2, 10%);
     }

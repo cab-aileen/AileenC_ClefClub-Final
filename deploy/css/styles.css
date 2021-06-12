@@ -377,6 +377,14 @@ main {
 .hero {
   grid-area: hero;
 }
+.hero img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
 
 .welcome {
   grid-area: welcome;
@@ -384,27 +392,27 @@ main {
 @media (min-width: 768px) {
   .welcome {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "w w w w w . . ." "i i i i img img img img" "ii ii ii ii img img img img" "edu1 edu1 edu1 edu1 edu2 edu2 edu2 edu2";
+  }
+  .welcome .cc {
+    grid-area: w;
   }
   .welcome .intro {
-    grid-area: 2;
-    grid-template-rows: 200px;
+    grid-area: i;
   }
-  .welcome .performer {
-    grid-row: 2/4;
+  .welcome .performer-img {
+    grid-area: img;
   }
   .welcome .intro2 {
-    grid-row: 3;
-    grid-area: 3;
+    grid-area: ii;
   }
   .welcome .eduevents1 {
-    grid-column: 1;
-    grid-row: 4;
+    grid-area: edu1;
   }
   .welcome .eduevents2 {
-    grid-column: 2;
-    grid-row: 4;
+    grid-area: edu2;
   }
 }
 
@@ -414,25 +422,31 @@ main {
 @media (min-width: 768px) {
   .history {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas: "h h h . s s s s" ". u u u u u u ." "tory tory tory tory tory tory tory tory" "tory tory tory tory tory tory tory tory" ". wat wat wat wat wat wat ." ". st st st st st st ." "trum trum trum trum trum trum trum trum" "trum trum trum trum trum trum trum trum";
   }
   .history .title {
-    grid-row: 1/8;
+    grid-area: h;
   }
   .history .segregation {
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: s;
   }
   .history .unusual {
-    grid-column: span 2;
+    grid-area: u;
   }
-  .history .jazzhist {
-    grid-column: span 2;
+  .history .jazzhistor {
+    grid-area: tory;
+  }
+  .history .dr {
+    grid-area: wat;
   }
   .history .streets {
+    grid-area: st;
     display: flex;
-    grid-column: span 2;
+  }
+  .history .histtrumpet {
+    grid-area: trum;
   }
 }
 
@@ -462,9 +476,73 @@ main {
 .membership {
   grid-area: membership;
 }
+@media (min-width: 768px) {
+  .membership ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: "mem mem mem ba ba bb bb ." ". bc bc bd bd be be .";
+  }
+  .membership ul .title {
+    grid-area: mem;
+  }
+  .membership ul #member-box-1 {
+    grid-area: ba;
+  }
+  .membership ul #member-box-2 {
+    grid-area: bb;
+  }
+  .membership ul #member-box-3 {
+    grid-area: bc;
+  }
+  .membership ul #member-box-4 {
+    grid-area: bd;
+  }
+  .membership ul #member-box-5 {
+    grid-area: be;
+  }
+}
 
 .rentals {
   grid-area: rentals;
+}
+.rentals img {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .rentals {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "ti ti . . pur pur pur pur" "ti ti  . . purr purr purr purr" "hall hall hall hall hall hall hall hall" "hall hall hall hall hall hall hall hall" "ta ta ta ta ta ta2 ta2 ta2" ". . tb3 tb3 tb3 tb3 . ." ". bo bo bo bo bo bo .";
+  }
+  .rentals .purp {
+    grid-area: pur;
+  }
+  .rentals .purp2 {
+    grid-area: purr;
+  }
+  .rentals .note {
+    grid-area: hall;
+  }
+  .rentals .note h5 {
+    text-align: center;
+  }
+  .rentals .table1 {
+    grid-area: ta;
+  }
+  .rentals .table2 {
+    grid-area: ta2;
+  }
+  .rentals .table3 {
+    grid-area: tb3;
+  }
+  .rentals .book {
+    grid-area: bo;
+  }
+  .rentals .title {
+    grid-area: ti;
+    margin-top: auto;
+  }
 }
 
 .events {
@@ -483,6 +561,23 @@ main {
   display: grid;
   grid-template-columns: 70px auto;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .media {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "m m m m . . . . . . . ." "v v v v v v p p p p p p" "v v v v v v p p p p p p" "v v v v v v p p p p p p";
+  }
+  .media .title {
+    grid-area: m;
+  }
+  .media .videos {
+    grid-area: v;
+  }
+  .media .photos {
+    grid-area: p;
+  }
 }
 
 .footer {
@@ -551,10 +646,11 @@ body {
 .nav1 {
   display: grid;
   background: #dbe5f2;
-  grid-template-columns: 700px 1fr 1fr;
+  grid-template-columns: 1fr 150px 70px;
 }
 .nav1 #logo {
   display: none;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   .nav1 #logo {
@@ -562,8 +658,7 @@ body {
   }
 }
 .nav1 #button-container {
-  padding: 10px;
-  text-align: right;
+  padding: 20px;
 }
 .nav1 #button-container button {
   background-color: #b7b7b8;
@@ -581,6 +676,8 @@ body {
 }
 .nav1 #bag {
   color: #0156cb;
+  grid-column: 3/3;
+  padding: 20px;
 }
 
 .nav2 {
@@ -597,11 +694,12 @@ body {
 }
 .nav2 #search {
   color: #0156cb;
+  margin: 20px;
 }
 .nav2 #burger-container {
   align-items: center;
   display: flex;
-  padding: 10px;
+  padding: 20px;
   color: #0156cb;
 }
 @media (min-width: 1024px) {
@@ -667,7 +765,6 @@ body {
 .welcome {
   background: #8f6c95;
   color: #ffffff;
-  padding-top: 80px;
 }
 
 .cc {
@@ -693,10 +790,13 @@ body {
 
 .cc {
   background-color: #194f90;
+  margin-top: 75px;
+  margin-bottom: 40px;
 }
 
 .history {
   padding-top: 80px;
+  color: #111c4e;
 }
 
 .jazzhistor {
@@ -735,6 +835,9 @@ body {
   margin: 80px 20px;
   padding: 45px 25px;
 }
+.education .ensemble h2 {
+  color: #0156cb;
+}
 .education .ensemble:hover {
   background: #7e75d6;
 }
@@ -749,6 +852,9 @@ body {
   margin: 80px 20px;
   padding: 45px 25px;
 }
+.education .private h2 {
+  color: #0156cb;
+}
 .education .private:hover {
   background: #7e75d6;
 }
@@ -762,6 +868,9 @@ body {
   background: #a39ce2;
   margin: 80px 20px;
   padding: 45px 25px;
+}
+.education .master h2 {
+  color: #0156cb;
 }
 .education .master:hover {
   background: #7e75d6;
@@ -806,37 +915,42 @@ body {
   background-color: #194f90;
   color: #ffff;
   padding: 20px;
+  margin-bottom: auto;
 }
 
 .membership {
   padding-top: 80px;
+  padding-bottom: 75px;
   color: #fff;
 }
 .membership li {
-  background: #0093e0;
   margin-top: 45px;
-  margin-left: 75px;
-  margin-right: 75px;
+  margin-left: 250px;
+  margin-right: 250px;
   margin-bottom: 80px;
   box-shadow: 1px 1px 3px gray;
 }
-.membership li h3 {
-  padding: 45px;
-}
 .membership li .member-content {
-  padding: 0 50px 30px;
+  background: #0093e0;
+  padding: 40px 30px 90px;
   text-align: center;
+}
+.membership li .member-content h1 {
+  padding-bottom: 40px;
+}
+.membership li .member-content p {
+  padding-bottom: 75px;
 }
 .membership li button {
   background: #b7b7b8;
   border: none;
+  font-weight: 600;
   padding: 5px 10px;
   color: #0156cb;
 }
 @media (min-width: 768px) {
-  .membership {
-    width: 75%;
-    margin: 30px auto;
+  .membership li {
+    margin: 20px;
   }
 }
 
@@ -846,6 +960,18 @@ body {
   padding-top: 80px;
 }
 
+.book {
+  margin-bottom: 75px;
+  font-weight: 600;
+}
+.book button {
+  background: #b7b7b8;
+  color: #0156cb;
+  border: none;
+  padding: 5px 10px;
+  font-weight: 600;
+}
+
 .table {
   color: #111c4e;
 }
@@ -853,23 +979,47 @@ body {
 .purp {
   background: #a39ce2;
   padding: 50px;
+  margin-top: 45px;
 }
 
 .purp2 {
   background: #a39ce2;
   padding: 50px;
+  margin-bottom: 80px;
 }
 
+@media (min-width: 768px) {
+  .purp {
+    margin-bottom: 40px;
+  }
+
+  .book {
+    text-align: center;
+  }
+}
 .events {
   padding-top: 80px;
+  color: #111c4e;
 }
 
 .parkbox {
   background: #dbe5f2;
+  padding: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .parkbox {
+    display: flex;
+  }
+  .parkbox h3 {
+    margin-right: 120px;
+  }
 }
 
 .march {
   display: flex;
+  margin-top: 45px;
   grid-gap: 10px;
   justify-content: center;
 }
@@ -884,12 +1034,13 @@ body {
 }
 @media (min-width: 768px) {
   .events-cal {
+    margin-top: 40px;
     display: list-item;
   }
 }
 
 .month {
-  padding: 45px 600px;
+  padding: 45px 300px;
   background: #0093e0;
   text-align: center;
 }
@@ -945,29 +1096,6 @@ body {
   color: white !important;
 }
 
-/* Add media queries for smaller screens */
-@media screen and (max-width: 720px) {
-  .weekdays li,
-.days li {
-    width: 13.1%;
-  }
-}
-@media screen and (max-width: 420px) {
-  .weekdays li,
-.days li {
-    width: 12.5%;
-  }
-
-  .days li .active {
-    padding: 2px;
-  }
-}
-@media screen and (max-width: 290px) {
-  .weekdays li,
-.days li {
-    width: 12.2%;
-  }
-}
 .donate {
   background: #8f6c95;
   color: #ffffff;
@@ -998,6 +1126,25 @@ body {
 
   .photos img {
     display: list-item;
+  }
+}
+@media (min-width: 1024px) {
+  .media img {
+    width: 100%;
+  }
+  .media a {
+    padding-top: 20px;
+  }
+
+  .videos {
+    line-height: 1.5;
+    border-right: 1px solid #0156cb;
+    padding-left: 20px 80px;
+    border-bottom: none;
+  }
+
+  .photos {
+    padding-left: 20px 80px;
   }
 }
 /* =============
@@ -1057,6 +1204,7 @@ body {
 }
 .footer .newsletter button {
   font-size: 14px;
+  font-weight: 600;
   padding: 5px 10px;
   color: #0156cb;
   border: none;

@@ -37,6 +37,14 @@ main {
 
 .hero {
   grid-area: hero;
+
+  img {
+    width: 100%;
+  }
+
+  @include md {
+    grid-template-columns: repeat(8, 1fr);
+  }
 }
 
 .welcome {
@@ -44,27 +52,36 @@ main {
 
   @include md {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "w w w w w . . ."
+      "i i i i img img img img"
+      "ii ii ii ii img img img img"
+      "edu1 edu1 edu1 edu1 edu2 edu2 edu2 edu2";
+
+    .cc {
+      grid-area: w;
+    }
 
     .intro {
-      grid-area: 2;
-      grid-template-rows: 200px;
+      grid-area: i;
     }
-    .performer {
-      grid-row: 2/4;
+
+    .performer-img {
+      grid-area: img;
     }
+
     .intro2 {
-      grid-row: 3;
-      grid-area: 3;
+      grid-area: ii;
     }
+
     .eduevents1 {
-      grid-column: 1;
-      grid-row: 4;
+      grid-area: edu1;
     }
+
     .eduevents2 {
-      grid-column: 2;
-      grid-row: 4;
+      grid-area: edu2;
     }
   }
 }
@@ -74,25 +91,45 @@ main {
 
   @include md {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(8, auto);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-areas:
+      "h h h . s s s s"
+      ". u u u u u u ."
+      "tory tory tory tory tory tory tory tory"
+      "tory tory tory tory tory tory tory tory"
+      ". wat wat wat wat wat wat ."
+      ". st st st st st st ."
+      "trum trum trum trum trum trum trum trum"
+      "trum trum trum trum trum trum trum trum";
 
     .title {
-      grid-row: 1/8;
+      grid-area: h;
     }
+
     .segregation {
-      grid-column: 2;
-      grid-row: 1;
+      grid-area: s;
     }
+
     .unusual {
-      grid-column: span 2;
+      grid-area: u;
     }
-    .jazzhist {
-      grid-column: span 2;
+
+    .jazzhistor {
+      grid-area: tory;
     }
+
+    .dr {
+      grid-area: wat;
+    }
+
     .streets {
+      grid-area: st;
       display: flex;
-      grid-column: span 2;
+    }
+
+    .histtrumpet {
+      grid-area: trum;
     }
   }
 }
@@ -127,10 +164,99 @@ main {
 
 .membership {
   grid-area: membership;
+
+  @include md {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-areas:
+        "mem mem mem ba ba bb bb ."
+        ". bc bc bd bd be be .";
+
+      .title {
+        grid-area: mem;
+      }
+
+      #member-box-1 {
+        grid-area: ba;
+      }
+
+      #member-box-2 {
+        grid-area: bb;
+      }
+
+      #member-box-3 {
+        grid-area: bc;
+      }
+
+      #member-box-4 {
+        grid-area: bd;
+      }
+
+      #member-box-5 {
+        grid-area: be;
+      }
+    }
+  }
 }
 
 .rentals {
   grid-area: rentals;
+
+  img {
+    width: 100%;
+  }
+
+  @include md {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "ti ti . . pur pur pur pur"
+      "ti ti  . . purr purr purr purr"
+      "hall hall hall hall hall hall hall hall"
+      "hall hall hall hall hall hall hall hall"
+      "ta ta ta ta ta ta2 ta2 ta2"
+      ". . tb3 tb3 tb3 tb3 . ."
+      ". bo bo bo bo bo bo .";
+
+    .purp {
+      grid-area: pur;
+    }
+
+    .purp2 {
+      grid-area: purr;
+    }
+
+    .note {
+      grid-area: hall;
+
+      h5 {
+        text-align: center;
+      }
+    }
+
+    .table1 {
+      grid-area: ta;
+    }
+
+    .table2 {
+      grid-area: ta2;
+    }
+
+    .table3 {
+      grid-area: tb3;
+    }
+
+    .book {
+      grid-area: bo;
+    }
+
+    .title {
+      grid-area: ti;
+      margin-top: auto;
+    }
+  }
 }
 
 .events {
@@ -147,6 +273,29 @@ main {
     display: grid;
     grid-template-columns: 70px auto;
     align-items: center;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "m m m m . . . . . . . ."
+      "v v v v v v p p p p p p"
+      "v v v v v v p p p p p p"
+      "v v v v v v p p p p p p";
+
+    .title {
+      grid-area: m;
+    }
+
+    .videos {
+      grid-area: v;
+    }
+
+    .photos {
+      grid-area: p;
+    }
   }
 }
 

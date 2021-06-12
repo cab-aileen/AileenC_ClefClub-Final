@@ -24,3 +24,25 @@
     display: list-item;
   }
 }
+
+@include lg {
+  .media {
+    img {
+      width: 100%;
+    }
+
+    a {
+      padding-top: 20px;
+    }
+  }
+  .videos {
+    line-height: 1.5;
+    border-right: 1px solid #0156cb;
+    padding-left: 20px 80px;
+    border-bottom: none;
+  }
+
+  .photos {
+    padding-left: 20px 80px;
+  }
+}
